@@ -1,2 +1,2 @@
-## 1.0.1
-improved formatting in the README file
+## 1.0.2
+improved formatting in the README file for more user friendly

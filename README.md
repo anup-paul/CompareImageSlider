@@ -73,22 +73,24 @@ import 'package:compare_image_slider/compare_image_slider.dart';
 
 ```
 
-import 'package:compare_image_slider/compare_image_slider.dart';
+
+import 'package:compare_image_slider/content/comapre_image_slider.dart';
+import 'package:flutter/material.dart';
 
 class MyWidget extends StatelessWidget {
-   @override
-   Widget build(BuildContext context) {
-      return SizedBox(
-              height: 500,
-              child: CompareImageSlider(
-                beforeImage: AssetImage('assets/images/image1.png'),
-                afterImage: AssetImage('assets/images/image2.png'),
-                initialPosition: 0.5, // Start in the middle
-                sliderColor: Colors.white,
-                sliderThickness: 2.0,
-              ),
-            );
-   }
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 500,
+      child: CompareImageSlider(
+        beforeImage: AssetImage('assets/images/image1.png'),
+        afterImage: AssetImage('assets/images/image2.png'),
+        initialPosition: 0.5, // Start in the middle
+        sliderColor: Colors.white,
+        sliderThickness: 2.0,
+      ),
+    );
+  }
 }
 
 ```
