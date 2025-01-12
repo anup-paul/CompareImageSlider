@@ -1,6 +1,6 @@
 name: compare_image_slider
 description: "The CompareImageSlider package is a Flutter widget that provides an interactive image comparison slider. It allows users to compare two images by dragging a slider horizontally, revealing portions of the before and after images seamlessly."
-version: 0.0.1
+version: 1.0.1
 homepage: https://github.com/anup-paul/CompareImageSlider
 repository: https://github.com/anup-paul/CompareImageSlider
 
