@@ -87,7 +87,7 @@ class MyWidget extends StatelessWidget {
                 sliderColor: Colors.white,
                 sliderThickness: 2.0,
               ),
-            ),
+            );
    }
 }
 
