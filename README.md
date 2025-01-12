@@ -11,29 +11,100 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/to/develop-packages).
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+# CompareImageSlider
+
+The `CompareImageSlider` package is a Flutter widget that provides an interactive image comparison slider. It allows users to compare two images by dragging a slider horizontally, revealing portions of the before and after images seamlessly.
+
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- Allows users to compare "before" and "after" images by dragging a slider horizontally.
+- Set the starting position of the slider (from 0.0 to 1.0) to determine how much of each image is initially visible.
+- Provides a smooth and intuitive user experience for adjusting the slider position in real-time.
+- Efficient rendering with CustomClipper ensures smooth performance for various screen sizes.
+- Works with AssetImage, NetworkImage, or any other ImageProvider.
+- Automatically adapts to different screen sizes and orientations, making it ideal for mobile and tablet apps.
 
-## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+#### AWESOME RATING
+![DEMO](screenshot/screenshot.png)
+
+![DEMO](screenshot/screenshot_02.png)
+
+
+# Installing
+
+### 1. Depend on it
+
+Add this to your package's `pubspec.yaml` file:
+
+```yaml
+dependencies:
+  compare_image_slider: ^0.0.1
+```
+
+### 2. Install it
+
+You can install packages from the command line:
+
+with `pub`:
+
+```
+$ pub get
+```
+
+with `Flutter`:
+
+```
+$ flutter pub get
+```
+
+### 3. Import it
+
+Now in your `Dart` code, you can use:
+
+
+```dart
+import 'package:compare_image_slider/compare_image_slider.dart';
+```
+
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
-```dart
-const like = 'sample';
 ```
 
-## Additional information
+import 'package:compare_image_slider/compare_image_slider.dart';
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+class MyWidget extends StatelessWidget {
+   @override
+   Widget build(BuildContext context) {
+      return SizedBox(
+              height: 500,
+              child: CompareImageSlider(
+                beforeImage: AssetImage('assets/images/image1.png'),
+                afterImage: AssetImage('assets/images/image2.png'),
+                initialPosition: 0.5, // Start in the middle
+                sliderColor: Colors.white,
+                sliderThickness: 2.0,
+              ),
+            ),
+   }
+}
+
+```
+
+## Customization
+- Initial Slider Position
+    => Use the initialPosition property to set the starting position of the slider.
+    => Accepts a value between 0.0 (fully showing the "before" image) and 1.0 (fully showing the "after" image).
+- Slider Color
+    => Customize the slider's color using the sliderColor property to match your app's theme.
+- Slider Thickness
+    => Adjust the thickness of the slider using the sliderThickness property.
+- Image Sources
+    => Use any ImageProvider (e.g., AssetImage, NetworkImage, MemoryImage) for the beforeImage and afterImage.
+
+
+
+## Contributions
+Feel free to contribute to this project by submitting a pull request or opening an issue.
